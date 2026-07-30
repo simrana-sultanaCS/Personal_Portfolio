@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simrana Sultana Khatun — Student Portfolio (Demo)</title>
+<style>
+  :root{
+    --ink:#20232a;
+    --paper:#fbfaf7;
+    --line:#e3e0d8;
+    --accent:#3a5ba0;
+    --accent-soft:#e8edf7;
+    --warm:#c9762b;
+    --muted:#6f6c64;
+    --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Georgia', 'Times New Roman', serif;
+    line-height:1.6;
+  }
+  a{color:inherit; text-decoration:none;}
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 6vw;
+    border-bottom:1px solid var(--line);
+    font-family:Arial, sans-serif;
+  }
+  .logo{font-weight:800; font-size:1.2rem; letter-spacing:-0.01em;}
+  nav a{margin-left:26px; font-size:0.92rem; color:var(--muted);}
+  nav a:hover{color:var(--ink);}
+
+  main{max-width:1000px; margin:0 auto; padding:0 6vw;}
+
+  .hero{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:50px;
+    align-items:center;
+    padding:70px 0 60px;
+  }
+  .photo-frame{
+    width:100%;
+    aspect-ratio:4/5;
+    border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--accent-soft), #fff);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:Arial, sans-serif;
+    color:var(--accent);
+    font-weight:700;
+    font-size:3.2rem;
+  }
+  .eyebrow{
+    font-family:Arial, sans-serif;
+    display:inline-block;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-size:0.78rem;
+    font-weight:700;
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:16px;
+    letter-spacing:0.03em;
+  }
+  h1{
+    font-size:clamp(2rem, 3.6vw, 2.8rem);
+    line-height:1.15;
+    margin-bottom:10px;
+  }
+  .role{
+    font-family:Arial, sans-serif;
+    color:var(--muted);
+    font-size:1.05rem;
+    margin-bottom:20px;
+  }
+  .bio{
+    color:var(--muted);
+    max-width:480px;
+    margin-bottom:26px;
+  }
+  .hero-links{font-family:Arial, sans-serif; display:flex; gap:14px;}
+  .btn-primary{
+    background:var(--accent); color:#fff;
+    padding:11px 22px; border-radius:9px; font-weight:600; font-size:0.92rem;
+  }
+  .btn-ghost{
+    border:1px solid var(--line);
+    padding:11px 22px; border-radius:9px; font-weight:600; font-size:0.92rem;
+  }
+
+  section.block{padding:44px 0; border-top:1px solid var(--line);}
+  .section-label{
+    font-family:Arial, sans-serif;
+    font-size:0.78rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--warm);
+    margin-bottom:16px;
+  }
+
+  .edu-item{
+    display:flex; justify-content:space-between; gap:20px;
+    padding:14px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .edu-item:last-child{border-bottom:none;}
+  .edu-item h4{font-size:1.05rem; margin-bottom:2px;}
+  .edu-item p{color:var(--muted); font-size:0.92rem;}
+  .edu-year{
+    font-family:Arial, sans-serif;
+    color:var(--muted);
+    font-size:0.88rem;
+    white-space:nowrap;
+  }
+
+  .skills{
+    display:flex; flex-wrap:wrap; gap:10px;
+    font-family:Arial, sans-serif;
+  }
+  .skill-chip{
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:0.85rem;
+    font-weight:600;
+  }
+
+  .projects{display:grid; grid-template-columns:repeat(2, 1fr); gap:22px;}
+  .project-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    background:#fff;
+  }
+  .project-card h4{margin-bottom:6px;}
+  .project-card p{color:var(--muted); font-size:0.92rem; margin-bottom:10px;}
+  .project-tags{font-family:Arial, sans-serif; display:flex; gap:6px; flex-wrap:wrap;}
+  .project-tags span{
+    font-size:0.72rem;
+    color:var(--muted);
+    border:1px solid var(--line);
+    padding:3px 8px;
+    border-radius:6px;
+  }
+
+  footer{
+    font-family:Arial, sans-serif;
+    border-top:1px solid var(--line);
+    padding:26px 6vw;
+    display:flex; justify-content:space-between;
+    color:var(--muted); font-size:0.85rem;
+  }
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr; padding:44px 0;}
+    .projects{grid-template-columns:1fr;}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Simrana Sultana Khatun</div>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="photo-frame">SS</div>
+    <div>
+      <span class="eyebrow">Demo Portfolio</span>
+      <h1>Hi, I'm Simrana Sultana Khatun.</h1>
+      <p class="role">Undergraduate Student, University of Calcutta (2024 – Present)</p>
+      <p class="bio">A student from Kulpi, currently pursuing my undergraduate degree at the University of Calcutta. This is a sample portfolio page you can update with your own projects and skills.</p>
+      <div class="hero-links">
+        <a href="#" class="btn-primary">Download Resume</a>
+        <a href="#" class="btn-ghost">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-label">Education</div>
+    <div class="edu-item">
+      <div>
+        <h4>Undergraduate Studies</h4>
+        <p>University of Calcutta</p>
+      </div>
+      <div class="edu-year">2024 – Present</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <h4>Higher Secondary (HS)</h4>
+        <p>Kulpi Janapriya High School, Kulpi</p>
+      </div>
+      <div class="edu-year">Completed 2022</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-label">Skills</div>
+    <div class="skills">
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">JavaScript</span>
+      <span class="skill-chip">React</span>
+      <span class="skill-chip">SQL</span>
+      <span class="skill-chip">Data Structures</span>
+      <span class="skill-chip">Git</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-label">Projects</div>
+    <div class="projects">
+      <div class="project-card">
+        <h4>Campus Event Tracker</h4>
+        <p>A web app for students to find and RSVP to on-campus events, built as a semester project.</p>
+        <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+      </div>
+      <div class="project-card">
+        <h4>Grade Predictor</h4>
+        <p>A small machine learning model that predicts semester GPA from attendance and study-hour data.</p>
+        <div class="project-tags"><span>Python</span><span>Pandas</span><span>scikit-learn</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© 2026 Simrana Sultana Khatun</div>
+  <div>Sample portfolio page — built for README preview</div>
+</footer>
+
+</body>
+</html>
